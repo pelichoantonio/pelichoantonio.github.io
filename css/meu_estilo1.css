@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Asap');
+
+img{border-style: solid;}
+
+
+* {
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+#blocoinicial{
+ background-color: #000;
+  width: 100%;
+  animation: borda_1 9s infinite;
+
+}
+
+#blocoinicial h1{
+background-color: #000;
+font-size: 50px;
+font-family: 'Shadows Into Light', cursive;
+color: white;
+text-align: center;
+}
+
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+
+.menu a {
+  background-color: #000;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:white;
+  animation: borda_1 9s infinite;
+  text-decoration: none;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+  }
+
+.main {
+  background-color: #000;
+  animation: borda_1 9s infinite;
+  float:left;
+  width:60%;
+  padding:0 20px;
+  margin: 3px;
+  margin-left: 15px;
+}
+
+.main h2{
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #000;
+  color:white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.main img{
+  max-width: 100%;
+  max-height: auto;
+  border-radius: 50%;
+   margin-left: 120px;
+}
+
+.right {
+  background-color:#000;
+  float:right;
+  color: white;
+  width:18%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+  animation: borda_1 9s infinite;
+  margin-right: 8px;
+}
+
+.right a{
+text-decoration: none;
+font-family: 'Shadows Into Light', cursive;
+background-color:#000;
+font-size: 30px;
+
+}
+
+.right h3{
+  font-family: 'Shadows Into Light', cursive;
+  background-color:#000;
+  font-size: 20px;
+}
+
+#arredondamento {
+  animation: borda_1 9s infinite;
+  border-radius: 25px;
+  padding: 5px;
+  width: 90%;
+  background-color: #000;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 50px;
+  font-family: 'Asap', sans-serif;
+}
+
+#meuFormulario h3{
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  font-size: 25px;
+}
+
+#nome{
+  background-color: #fff;
+  float: center;
+ max-width: 300px;
+ max-height: 150px;
+ margin-left: 690px;
+
+}
+
+#senha{
+background-color: #fff;
+float: center;
+ max-width: 200px;
+ margin-left: 690px;
+
+}
+
+
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+
+  *{
+    overflow-x: hidden;
+  }
+  .menu, .main, .right {
+    width:100%;
+  }
+
+  .main img{
+    max-width: 80%;
+    max-height: auto;
+    border-radius: 50%;
+    margin-left: 30px;
+  }
+
+  .main {
+    background-color: #000;
+    animation: borda_1 9s infinite;
+    width:100%;
+    margin-left: 0px;
+  }
+
+  .main h2{
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #000;
+    color:white;
+    text-align: center;
+    font-size: 30px;
+  }
+
+
+  #arredondamento {
+    animation: borda_1 9s infinite;
+    border-radius: 25px;
+    padding: 5px;
+    width: 90%;
+    background-color: #000;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 20px;
+    font-family: 'Asap', sans-serif;
+  }
+
+  .right {
+    background-color:#000;
+    float:right;
+    color: white;
+    width:100%;
+    padding:15px;
+    margin-top:7px;
+    text-align:center;
+    animation: borda_1 9s infinite;
+    margin-right: 0;
+  }
+
+  .right a{
+  text-decoration: none;
+  font-family: 'Shadows Into Light', cursive;
+  background-color:#000;
+  font-size: 30px;
+
+  }
+
+  .right h3{
+    font-family: 'Shadows Into Light', cursive;
+    background-color:#000;
+    font-size: 20px;
+  }
+
+  #nome{
+    background-color: #fff;
+    float: center;
+    width: 100%;
+    margin-left: 70px;
+  }
+
+  #senha{
+    background-color: #fff;
+    float: center;
+   width: 100%;
+   margin-left: 130px;
+  }
+
+#botao{
+  width: 100%;
+  margin-left: 10px;;
+
+}
+
+}
+
+
+
+@keyframes color_1 {
+    0%   { color: #9999; }
+    25%   { color:#94b785; }
+    50%   {color:#708090;  }
+    100% {color: #696969; }
+}
+
+@keyframes borda_1 {
+    0%   { border:5px solid #9999; }
+    25%   {  border:5px solid #94b785; }
+    50%   { border:5px solid #708090;  }
+    100% {border:5px solid #696969;}
+}
+
+@keyframes menu_1 {
+    0%   { background-color: :#c4d7e2; }
+    25%   { background-color:#94b785; }
+    50%   {background-color:#708090;  }
+    100% {background-color: #696969; }
+}
