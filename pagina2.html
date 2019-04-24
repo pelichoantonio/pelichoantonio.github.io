@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){ 
+
+if (localStorage.getItem("nome") == 'Antonio' && localStorage.getItem("senha") =='123') {
+$('#conteudo1').text('Bem vindo(a) a area reservada! Acesso PERMITIDO!');
+}else{
+$('#conteudo1').text('acesso NEGADO!');
+}
+});
+</script>
+</head>
+
+<body>
+<p>Olá <spam id="conteudo1"></spam></p>
+</body>
+</html>
