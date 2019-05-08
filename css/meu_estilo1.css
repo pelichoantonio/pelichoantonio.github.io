@@ -10,6 +10,10 @@ img{border-style: solid;}
   background-color: #000;
 }
 
+.modal-body p{
+  color:#fff;
+}
+
 #blocoinicial{
  background-color: #000;
   width: 100%;
@@ -220,15 +224,17 @@ float: center;
    margin-left: 130px;
   }
 
-#botao{
-  width: 100%;
-  margin-left: 10px;;
 
 }
 
+.container{
+  color: white;
+
 }
 
-
+#myModal2{
+background-color:#fff;
+}
 
 @keyframes color_1 {
     0%   { color: #9999; }
@@ -250,3 +256,4 @@ float: center;
     50%   {background-color:#708090;  }
     100% {background-color: #696969; }
 }
+
