@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +6,19 @@
   <title>
 Californication
 </title>
+
+<style>
+.txt{
+	 font-family: 'Acme', sans-serif;
+text-align: center;
+animation: color_1 13s infinite;
+}
+</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/meu_estilo1.css " />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -31,6 +44,53 @@ alert("Você deve preencher o usuário e senha!")
 
 </script>
 
+<script>
+
+  $(document).ready(function() {
+
+
+
+    $('#form1').on('submit', function(e) {
+
+      e.preventDefault();
+
+
+
+      var api_url = 'https://api.linkpreview.net'
+
+      var key = '5cd33ddbb0ff4461d2e7724268fab716cf630d9419bf1' // real
+
+      $.ajax({
+
+        url: api_url + "?key=" + key + "&q=" + $("#endereco").val(),
+
+        contentType: "application/json",
+
+        dataType: 'json',
+
+        success: function(result) {
+
+          $("#p1").text(result.title);
+
+          $("#p2").text(result.description);
+
+          $('#p3').attr('src', result.image);
+
+          $("#p4").text(result.url);
+
+        }
+
+      });
+
+
+
+    });
+
+
+
+  });
+
+</script>
 
 </head>
 
@@ -49,7 +109,7 @@ alert("Você deve preencher o usuário e senha!")
 
     <div class="main">
       <h2>Sobre Californication</h2>
-      <img src="2.PNG">
+      <img src="images/2.png">
       <p id="arredondamento"> <br>
       Hank Moody (David Duchovny, Arquivo X) é um escritor extraordinário que além de ser pai tem muitos vicios,
       particularmente no que diz respeito ao sexo. Californication nos proporciona uma visão única,
@@ -73,26 +133,66 @@ alert("Você deve preencher o usuário e senha!")
       </div>
   </div>
 
-  <form id="meuFormulario" action="pagina2.html">
-<h3>Seu Login: </h3>
-<input type="text" name="nome" value="" id="nome">
-<h3> Sua senha: </h3>
-<input type="password" name="senha" value="" id="senha">
-<br><br>
-<br><br>
-<input type="submit" value="Enviar" id="botao"
-style="width: 100%;
-margin: 0px;
-height: 70px;
-background-color: #fff;
-color: #000;
-font-size: 15pt;
-float: center;
-">
-</form>
+  <div class="container" >
+    <h2>Informe seu Login</h2>
+    <form action="/action_page.php">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember"> Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 
+  <div class="container">
 
-  <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;"> Usuário: Antonio | Senha: 123"</div>
+  <h1 class="txt">Teste API</h1>
+
+   <form name="form1" id="form1" style="text-align:center;">
+
+     URL:
+
+     <input type="text" id="endereco" name="endereco">
+
+     <br> </br>
+
+     <div class="container">
+
+     <input type="submit" value="ENVIAR" data-toggle="modal" data-target="#myModal2" class="btn btn-primary" >
+
+     <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title" style="color:black"> </h4>
+            </div>
+            <div class="modal-body">
+                <p id="p1"></p>
+
+              <p id="p2"></p>
+
+              <img id="p3" src="" />
+
+              <p id="p4"></p>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
 
 </body>
 
